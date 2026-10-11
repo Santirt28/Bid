@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 32px;
+    color: #111;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    display: grid;
+    justify-items: start;
+    gap: 18px;
+    width: min(100%, 380px);
+    padding: 0;
+}
+
+.app h1 {
+    margin: 0 0 6px;
+    font-size: 32px;
+}
+
+.history-section h2 {
+    margin: 0 0 12px;
+    font-size: 22px;
+}
+
+#bid-history {
+    display: grid;
+    align-content: start;
+    gap: 14px;
+    width: 230px;
+    min-height: 200px;
+    margin: 0;
+    padding: 22px 20px;
+    border: 1px solid #333;
+    background: #650ba1;
+    list-style: none;
+}
+
+#bid-history li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.bid-entry {
+    display: grid;
+    gap: 12px;
+}
+
+.bid-entry strong {
+    font-size: 16px;
+}
+
+.bid-controls {
+    display: grid;
+    gap: 14px;
+    width: 100%;
+}
+
+.bid-row {
+    display: grid;
+    grid-template-columns: 74px minmax(0, 160px) auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.bid-row label {
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.bid-row input {
+    width: 100%;
+    height: 32px;
+}
+
+.bid-row button,
+#cleanbtn {
+    padding: 7px 10px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.bid-row button {
+    min-height: 32px;
+}
+
+.remove-bid {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #a33;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.highest-section {
+    width: 230px;
+    min-height: 100px;
+    padding: 24px 14px;
+    border: 1px solid #650ba1;
+    background: #650ba1;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#high {
+    display: grid;
+    gap: 2px;
+}
+
+.highest-value {
+    font-size: 18px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    .app {
+        width: min(100%, 360px);
+    }
+
+    .bid-row {
+        grid-template-columns: 74px minmax(0, 1fr) auto;
+    }
+}

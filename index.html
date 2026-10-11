@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+        <h1>Bid app</h1>
+        <section class="history-section">
+            <h2>Bid history</h2>
+            <ul id="bid-history">
+                <li>No bid yet</li>
+            </ul>
+        </section>
+
+        <section class="bid-controls" aria-label="Place a bid">
+            <div class="bid-row">
+                <label for="bidder1-input">Bidder 1</label>
+                <input id="bidder1-input" type="number" aria-label="Bid amount for bidder 1" />
+                <button id="bidder1-btn" type="button" aria-label="Place bid">Place bid</button>
+            </div>
+            <div class="bid-row">
+                <label for="bidder2-input">Bidder 2</label>
+                <input id="bidder2-input" type="number" aria-label="Bid amount for bidder 2" />
+                <button id="bidder2-btn" type="button" aria-label="Place bid">Place bid</button>
+            </div>
+        </section>
+        <section class="highest-section">
+            <div id="high" aria-live="polite">
+                <strong>Highest Bidder</strong>
+                <span class="highest-value">No bids yet</span>
+            </div>
+        </section>
+        <button id="cleanbtn" type="button">Clear Bids</button>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
